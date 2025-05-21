@@ -1,32 +1,32 @@
-# Encryption Module
+# Encryptor Module
 
 ## Overview
 
-The Encryption module provides symmetric encryption and decryption capabilities for BlackVault, securing message confidentiality after key exchange.
+The Encryptor module provides authenticated encryption and decryption using AES-GCM, ensuring confidentiality and integrity for BlackVault messages.
 
-Features include:
+Features:
 
-- AES-256 in GCM mode for authenticated encryption  
-- Support for encryption and decryption of arbitrary data payloads  
-- Secure generation and management of IVs (nonces)  
-- Integration with Session Manager to use session keys transparently  
-- Resistance to replay and tampering attacks through authentication tags
+- AES-GCM encryption with 256-bit keys  
+- Generates secure random nonces for each encryption  
+- Supports encrypting arbitrary byte messages  
+- Verifies message authenticity on decryption and raises errors on tampering
 
 ---
 
 ## Architecture
 
-- Central `Encryptor` class exposes encrypt and decrypt methods  
-- Uses cryptographic primitives from the Crypto module  
-- Designed for performance and security, minimizing data copies and leaks
+- Uses PyCryptodome’s AES-GCM implementation  
+- Integrates seamlessly with SessionManager for key retrieval  
+- Provides simple `encrypt` and `decrypt` APIs returning ciphertext, tag, and nonce
 
 ---
 
 ## Usage Example
 
 ```python
-from encryption import Encryptor
+from encryption.encryptor import Encryptor
 
-encryptor = Encryptor(session_key)
-ciphertext, tag, nonce = encryptor.encrypt(b"Secret Message")
+key = b'\x00' * 32  # Replace with session key
+encryptor = Encryptor(key)
+ciphertext, tag, nonce = encryptor.encrypt(b'secret message')
 plaintext = encryptor.decrypt(ciphertext, tag, nonce)
