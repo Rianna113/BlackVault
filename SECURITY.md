@@ -1,62 +1,79 @@
 # 🔐 Security Policy
 
-BlackVault is a self-defending encrypted communication framework. As such, security is not an afterthought — it is the core mission. If you find a vulnerability, we ask you to **act responsibly and report it** in private.
+BlackVault is built for security-first communications. If you discover a vulnerability, we **urgently** request that you follow the responsible disclosure guidelines outlined below.
 
 ---
 
-## 🚨 Reporting a Vulnerability
+## 📫 Contact
 
-Please **DO NOT** open public issues for security problems.  
-Instead, contact:
+To report a security issue privately and responsibly:
 
-**📧 Repo-creator**
+- GitHub: Open a security advisory (NOT a public issue)
 
-Include the following:
-
-- Clear explanation of the issue
-- Reproduction steps (if applicable)
-- System/environment context
-- Any relevant logs or stack traces
+I will acknowledge your report within **72 hours** and aim to provide a resolution timeline within **5 business days**.
 
 ---
 
-## 🔎 What Qualifies
+## 🚨 Severity Levels
 
-- Remote code execution (RCE)
-- Unauthorized data access
-- Spoofing/identity abuse
-- Denial of Service (DoS) via crafted input
-- Cryptographic flaws in message exchange or key handling
-- Logic bombs or bypasses for tamper-detection
-
----
-
-## 🕒 Response Timeline
-
-You will receive a reply within **48-72 hours**. We will coordinate a timeline for patching and responsible disclosure.
+| Level     | Description                                                                 |
+|-----------|-----------------------------------------------------------------------------|
+| CRITICAL  | Unauthorized remote access, session hijack, encryption bypass              |
+| HIGH      | Local privilege escalation, logic error in trap triggers                   |
+| MEDIUM    | Denial of service, obfuscation bypass, kill switch anomalies               |
+| LOW       | Minor input validation gaps, informational leakage (non-critical)          |
 
 ---
 
-## 🛡️ Exploit Mitigations (by design)
+## 🧪 Scope of Testing
 
-BlackVault includes internal defense logic to mitigate:
+You are authorized to test:
 
-- Automated parsing attacks
-- Man-in-the-middle protocol injection
-- Key misuse or forged signature replay
-- Tamper-detection bypasses
-- Replay or packet forgery
-- Unauthorized decryption without contextual handshake
+- Your own account(s)
+- Your locally deployed BlackVault builds
+- Public API endpoints provided by the maintainers (TBA)
 
----
+You are NOT authorized to:
 
-## 🤝 Responsible Disclosure Promise
-
-We will not pursue legal action against good-faith researchers who:
-- Follow the above process
-- Don’t exploit the vulnerability beyond demonstration
-- Give us a reasonable time to fix the issue before public disclosure
+- Attempt denial-of-service against hosted services  
+- Attack other users without explicit consent  
+- Use third-party testing platforms without permission  
 
 ---
 
-Thank you for keeping BlackVault and its users safe.
+## 🧰 Preferred Report Format
+
+Please include:
+
+- Vulnerability summary  
+- Affected modules and functions (e.g., `/core/handshake_engine/init_key`)  
+- Steps to reproduce  
+- Proof-of-concept code, if applicable  
+- Suggested fixes (if known)
+
+---
+
+## 🛡️ Coordinated Disclosure
+
+We believe in **transparency, not panic**. When a valid issue is confirmed:
+
+1. Triage and confirm severity.
+2. Patch will be developed and tested.
+3. Security advisory and changelog will be published.
+4. Credit will be given if the reporter consents.
+
+---
+
+## ❌ Out of Scope
+
+We will NOT consider the following as valid issues:
+
+- "Self-XSS" (requires user to attack themselves)  
+- Reports without reproducible proof  
+- Tools or payloads not relevant to BlackVault’s architecture
+
+---
+
+## ❤️ Thanks
+
+BlackVault exists to protect the vulnerable. By reporting vulnerabilities, you are actively defending lives, freedoms, and rights.
