@@ -1,66 +1,85 @@
-# Contributing to BlackVault
+# 🤝 Contributing to BlackVault
 
-I appreciate your interest in improving BlackVault. This is a mission-critical framework — so contributions must meet high standards for clarity, security, and professionalism.
+Thank you for your interest in strengthening global security. BlackVault is a defense-first encrypted communications framework. It requires high-integrity contributions — technically and ethically.
 
-## 🚀 How to Contribute
+---
 
-1. **Fork the repository**
-2. **Create a feature branch**
-   ```bash
-   git checkout -b feature/my-feature
+## 🔑 Guiding Values
 
-3. Write clear, secure, and tested code
+- **Security > Speed**  
+- **Clarity > Cleverness**  
+- **Transparency > Hype**  
 
-4. Run all tests
+This is not a hype project. It's a protective shield for people who need it.
 
-5. Submit a Pull Request with a descriptive title and detailed message
+---
 
-🔧 Development Standards
-All code must pass linting and static analysis
+## 🧰 How to Contribute
 
-All PRs must include relevant tests (unit/integration)
+1. **Fork the repo** and clone your fork.
+2. Create a branch for your feature or fix: git checkout -b feature/<your-feature-name>
 
-No unapproved dependencies — justify every addition
+3. Make changes locally. Ensure tests pass: ./run_tests.sh
 
-Follow existing naming and folder conventions
+4. Commit using conventional commits: feat: add session timeout handler
+fix: resolve nonce validation bug
 
-Keep commits atomic and meaningful
+5. Push your branch and open a Pull Request.
 
-📦 Project Structure (Simplified)
-/src          → Core modules  
-/tests        → Unit + integration tests  
-/examples     → Sample clients & usage demos  
-/docs         → Technical design & implementation  
+---
 
-🧪 Testing
-We use pytest for Python, and cargo test for Rust (if applicable). Add tests that match your changes.
+## ✅ PR Requirements
 
-To run all tests:
-# Python
-pytest
+Before your PR will be reviewed, make sure:
 
-# Rust (if present)
-cargo test
-# Python
-pytest
+- It includes **comments** where logic may not be obvious.
+- Tests are updated or added for new functionality.
+- It does not weaken security posture without discussion.
 
-# Rust (if present)
-cargo test
+---
 
-🛡️ Security
-If your contribution touches encryption, authentication, or defense logic:
+## 🔐 Security-Impacting Changes
 
-Explain the cryptographic rationale
+If your PR involves any of the following, tag it with `SECURITY OVERRIDE REQUIRED` in the PR title:
 
-Reference any known standards or threat models
+- Key exchange logic
+- Signature validation
+- Trap, kill, or fail-safe systems
+- Defense heuristics
 
-Flag it in the PR with SECURITY: high tag
+These will require review by the Lead Maintainer.
 
-📬 Questions?
-File an Issue; Keep in mind I won’t respond to vague or lazy requests. Show effort, show intent.
+---
 
-Let’s build the future of secure communication — one commit at a time.
+## 🧪 Test Coverage
 
+All new features must be accompanied by:
 
+- Unit tests for core logic
+- Fuzz/abuse tests for edge cases (if applicable)
+- Optional: performance benchmarks
+
+We use `pytest` and `hypothesis` (property-based testing) where possible.
+
+---
+
+## 💬 Communication
+
+- Bug reports: [GitHub Issues](https://github.com/BryceWDesign/BlackVault/issues)
+- Feature discussions: Start a thread in Discussions
+- Urgent security concerns: DM or email the Lead Maintainer (PGP key coming soon)
+
+---
+
+## ⚠️ Ethics Clause
+
+By contributing, you agree your work will **not be used for mass surveillance, commercial spyware, or authoritarian misuse**.  
+Violation of this clause = permanent ban from contribution and repo access.
+
+---
+
+## 🙏 Thank You
+
+You’re not just writing code. You’re helping build armor for people who don’t have it yet.
 
 
