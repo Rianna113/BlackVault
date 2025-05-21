@@ -2,23 +2,23 @@
 
 ## Overview
 
-The Session Manager handles secure session establishment, key exchange, and lifecycle management for BlackVault communications.
+The Session Manager module handles establishing, maintaining, and terminating secure communication sessions between BlackVault peers.
 
-Responsibilities include:
+Core responsibilities:
 
-- Initiating and completing cryptographic handshakes using Diffie-Hellman key exchange  
-- Generating and managing session keys with forward secrecy  
-- Maintaining session states and timeouts  
-- Supporting session resumption and renegotiation  
-- Providing session-related metadata to other modules such as encryption and monitoring
+- Perform key exchange handshake (Diffie-Hellman)  
+- Manage session keys lifecycle (generation, storage, expiration)  
+- Provide session keys to encryption and network modules  
+- Detect and recover from session failures  
+- Ensure forward secrecy by rotating keys periodically
 
 ---
 
 ## Architecture
 
-- Central `SessionManager` class orchestrates handshake, key derivation, and session states  
-- Supports asynchronous handshake operations  
-- Uses cryptographic primitives from the `crypto` module
+- Central `SessionManager` class exposes API to start and manage sessions  
+- Uses Diffie-Hellman from crypto module for secure key agreement  
+- Stores session state in-memory with optional persistent backing
 
 ---
 
@@ -27,7 +27,6 @@ Responsibilities include:
 ```python
 from session_manager import SessionManager
 
-session_mgr = SessionManager()
-session_mgr.start_handshake(peer_info)
-
-# Use session_mgr to retrieve session keys and state
+sm = SessionManager()
+sm.initiate_session(peer_id)
+key = sm.get_session_key(peer_id)
