@@ -1,32 +1,31 @@
-# Crypto Module
+# Crypto Primitives Module
 
 ## Overview
 
-The Crypto module provides fundamental cryptographic primitives for BlackVault's secure communication framework.
+This module provides fundamental cryptographic operations and algorithms used by BlackVault’s higher-level modules.
 
 Features include:
 
-- Diffie-Hellman key exchange implementation for secure shared secret generation  
-- Symmetric encryption and decryption primitives  
-- Secure random number generation  
-- Hashing utilities for key derivation and message integrity  
-- Interfaces designed for easy integration with session management and encryption modules
+- Diffie-Hellman key exchange implementation  
+- Key derivation functions (HKDF)  
+- Digital signatures with ECDSA  
+- Random number and key generation utilities
 
 ---
 
 ## Architecture
 
-- Contains classes and functions for core crypto algorithms  
-- Designed with security best practices and constant-time operations where applicable  
-- Easily extendable to support additional algorithms or hardware acceleration
+- Implements secure elliptic curve operations using PyCryptodome ECC  
+- Provides high-level APIs for easy integration with Session Manager and Encryptor  
+- Ensures cryptographic best practices and compliance with current standards
 
 ---
 
 ## Usage Example
 
 ```python
-from crypto import DiffieHellman
+from crypto.diffie_hellman import DiffieHellman
 
 dh = DiffieHellman()
-pub_key = dh.get_public_key()
-shared_secret = dh.compute_shared_secret(peer_pub_key)
+public_key = dh.get_public_key()
+shared_secret = dh.compute_shared_secret(peer_public_key)
